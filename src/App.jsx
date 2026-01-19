@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 
-// Import your new components
+import { Modal } from './components/ui/Modal';
+
 import { Hero } from './components/Hero';
 import { PriceBreakdown } from './components/PriceBreakdown';
+import { Timeline } from './components/Timeline';
+import { EMITable } from './components/EMITable';
+import { GSTSection } from './components/GSTSection';
 import { Statements } from './components/Statements';
-import { Modal } from './components/ui/Modal';
-// ... Import the others if you created them (Timeline, EMI, etc.) 
-// For now, I'll assume you might keep the others inline or refactor them later. 
-// But the Statements feature is fully wired up below.
+import { Summary } from './components/Summary';
 
 export default function App() {
   const [selectedProof, setSelectedProof] = useState(null);
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 dark font-sans">
+    <div className="min-h-screen bg-slate-900 text-slate-100 font-sans">
       <div className="max-w-2xl mx-auto px-4 py-8 space-y-8">
         
         {/* Header */}
@@ -22,22 +23,30 @@ export default function App() {
           <p className="text-slate-400 text-sm">iPhone 16 Purchase Transparency</p>
         </header>
 
-        {/* Components */}
+        {/* 1. Overview */}
         <Hero />
+
+        {/* 2. Costs */}
         <PriceBreakdown />
         
-        {/* ... Add Timeline, EMITable, GSTSection here ... */}
+        {/* 3. History & Setup */}
+        <Timeline />
 
-        {/* The New Statement Feature */}
+        {/* 4. Data Tables */}
+        <EMITable />
+        <GSTSection />
+
+        {/* 5. Proofs (With Image Popup Feature) */}
         <Statements 
           onSelectStatement={(item) => setSelectedProof(item)} 
         />
 
-        {/* ... Add Summary here ... */}
+        {/* 6. Conclusion */}
+        <Summary />
 
       </div>
 
-      {/* The Popup Modal */}
+      {/* Popup Modal Logic */}
       <Modal 
         isOpen={!!selectedProof}
         title={selectedProof?.label}
