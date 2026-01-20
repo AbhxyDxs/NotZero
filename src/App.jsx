@@ -25,17 +25,17 @@ export default function App() {
 
         {/* 1. Overview */}
         <Hero />
+        <EMITable />
 
-        {/* 2. Costs */}
-        <PriceBreakdown />
-        
-        {/* 3. History & Setup */}
+        {/* 2. History & Setup */}
         <Timeline />
 
-        {/* 4. Data Tables */}
-        <EMITable />
+        {/* 3. Data Tables */}
         <GSTSection />
 
+        {/* 4. Costs */}
+        <PriceBreakdown />
+        
         {/* 5. Proofs (With Image Popup Feature) */}
         <Statements 
           onSelectStatement={(item) => setSelectedProof(item)} 
