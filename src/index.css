@@ -41,4 +41,24 @@ body {
        try forcing it to Bold (700) or check if you can swap to Noto Sans. */
     font-weight: 700; 
   }
+  .text-malayalam-med {
+    font-family: 'Manjari', sans-serif;
+    /* Manjari is naturally smaller/thinner than Poppins. 
+       We boost the size slightly to match the optical height. */
+    font-size: 1.1em; 
+    line-height: 1.2;
+    /* If Manjari Regular (400) looks too thin next to Poppins, 
+       try forcing it to Bold (700) or check if you can swap to Noto Sans. */
+    font-weight: 400; 
+  }
+  .text-malayalam-med2 {
+    font-family: 'Manjari', sans-serif;
+    /* Manjari is naturally smaller/thinner than Poppins. 
+       We boost the size slightly to match the optical height. */
+    font-size: 1em; 
+    line-height: 1.2;
+    /* If Manjari Regular (400) looks too thin next to Poppins, 
+       try forcing it to Bold (700) or check if you can swap to Noto Sans. */
+    font-weight: 400; 
+  }
 }
