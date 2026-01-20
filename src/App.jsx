@@ -19,8 +19,10 @@ export default function App() {
         
         {/* Header */}
         <header className="mb-8 border-b border-slate-800 pb-6">
-          <h1 className="text-2xl font-bold text-white tracking-tight">Transaction Details</h1>
-          <p className="text-slate-400 text-sm">iPhone 16 Purchase Transparency</p>
+          <h1 className="text-malayalam-bold  text-white tracking-tight">Not Zero!</h1>
+          <p className="text-malayalam text-slate-400 text-sm">BBD No-Cost EMI is actually <b>Not Zero</b>!!</p><br></br>
+          <p className="text-malayalam text-slate-400 text-sm">Interest വരുന്ന പൈസ upfront discount ആയിട്ട് തരുന്ന് ഇണ്ടേൽ പോലും additional ആയിട്ട് കൊറച്ച് പൈസ കൂടെ വരുന്ന് ഇണ്ട്!!
+            <br></br>അതിൻ്റെ complete breakdown!</p>
         </header>
 
         {/* 1. Overview */}

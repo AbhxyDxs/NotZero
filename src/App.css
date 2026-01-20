@@ -40,3 +40,8 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Optional: Utility class if you want to use the funky Barriecito font for specific headers */
+.font-display {
+  font-family: 'Barriecito', cursive;
+}

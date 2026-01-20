@@ -1,8 +1,44 @@
+/* 1. Font Import (Must be at the very top) */
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Manjari:wght@100;400;700&family=Poppins:wght@200;400;600&display=swap');
+
+/* 2. Tailwind Import */
 @import "tailwindcss";
 
+/* 3. Global Styles */
 body {
+  /* - Poppins: Primary font for English text.
+     - Manjari: Will automatically take over only when Malayalam characters are detected.
+     - sans-serif: Fallback.
+  */
+  font-family: 'Poppins', 'Manjari', sans-serif;
+  
+  /* Your Tailwind theme setup */
   @apply bg-gray-50 text-slate-900 transition-colors duration-300;
 }
+
 .dark body {
   @apply bg-slate-900 text-slate-100;
+}
+
+@layer utilities {
+  .text-malayalam {
+    font-family: 'Manjari', sans-serif;
+    /* Manjari is naturally smaller/thinner than Poppins. 
+       We boost the size slightly to match the optical height. */
+    font-size: 1.1em; 
+    line-height: 1.2;
+    /* If Manjari Regular (400) looks too thin next to Poppins, 
+       try forcing it to Bold (700) or check if you can swap to Noto Sans. */
+    font-weight: 400; 
+  }
+  .text-malayalam-bold {
+    font-family: 'Manjari', sans-serif;
+    /* Manjari is naturally smaller/thinner than Poppins. 
+       We boost the size slightly to match the optical height. */
+    font-size: 2em; 
+    line-height: 1.2;
+    /* If Manjari Regular (400) looks too thin next to Poppins, 
+       try forcing it to Bold (700) or check if you can swap to Noto Sans. */
+    font-weight: 700; 
+  }
 }
